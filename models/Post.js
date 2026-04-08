@@ -10,7 +10,8 @@ const postSchema = new mongoose.Schema({
   content: {
     type: String,
     required: [true, "Вміст обов'язковий"],
-    minlength: [10, 'Вміст має бути не менше 10 символів']
+    minlength: [10, 'Вміст має бути не менше 10 символів'],
+    trim: true,
   },
   author: {
     type: String,

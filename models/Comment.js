@@ -14,7 +14,8 @@ const commentSchema = new mongoose.Schema({
   content: {
     type: String,
     required: [true, "Вміст коментаря обов'язковий"],
-    maxlength: [1000, 'Коментар занадто довгий']
+    maxlength: [1000, 'Коментар занадто довгий'],
+    trim: true
   },
   createdAt: { type: Date, default: Date.now }
 });
